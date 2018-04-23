@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 
 @Entity(name = "user_table")
@@ -23,9 +24,12 @@ private	String mobile;
 private	String feedback;
 private String userType;
 private String secretans;
+@Transient
 private String returnedMsg;
+@Transient
 private String exception;
 private Date createdon;
+@Transient
 private Boolean success;
 
 public int getId() {

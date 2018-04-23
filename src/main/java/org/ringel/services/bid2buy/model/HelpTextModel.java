@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity(name = "helpText_table")
 @Table(name = "helpText_table")
@@ -14,8 +15,11 @@ public class HelpTextModel {
 	private String disclaimerOnSignupPage;
 	private String disclaimerOnPartnerPage;
 	private String disclaimerOnSendmsgPage;
+	@Transient
 	private String returnedMsg;
+	@Transient
 	private String exception;
+	@Transient
 	private Boolean success;
 	 
 	
