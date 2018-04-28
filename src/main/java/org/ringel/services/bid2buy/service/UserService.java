@@ -1,7 +1,5 @@
 package org.ringel.services.bid2buy.service;
 
-import java.util.List;
-
 import org.ringel.services.bid2buy.model.UserModel;
 
 public interface UserService {

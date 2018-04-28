@@ -100,18 +100,21 @@ public class UserDaoImpl implements UserDao {
 			query.setParameter("id", id);
 			// List result = query.list();
 			List<UserModel> list = query.list();
-			return list.get(0);
+			model= list.get(0);
+			model.setSuccess(true);
 
 		} catch (Exception e) {
 			if (session.getTransaction() != null) {
 				session.getTransaction().rollback();
 				model.setException(e.toString());
 				model.setReturnedMsg("Error getting result");
+				model.setSuccess(false);
 				return model;
 			}
 		} finally {
 			session.close();
 		}
+		
 		return model;
 	}
 

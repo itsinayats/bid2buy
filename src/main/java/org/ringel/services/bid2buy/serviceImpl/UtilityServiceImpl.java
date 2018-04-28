@@ -3,10 +3,12 @@ package org.ringel.services.bid2buy.serviceImpl;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.ringel.services.bid2buy.dao.UtilityDao;
 import org.ringel.services.bid2buy.daoImpl.UtilityDaoImpl;
+import org.ringel.services.bid2buy.model.CategoriesModel;
 import org.ringel.services.bid2buy.model.HelpTextModel;
 import org.ringel.services.bid2buy.service.UtilityService;
 
@@ -40,6 +42,18 @@ public class UtilityServiceImpl implements UtilityService {
 		}
 
 		return formattedDate;
+	}
+
+
+
+	@Override
+	public  ArrayList<CategoriesModel> getCategories() {
+		UtilityDao dao = new UtilityDaoImpl();
+     ArrayList<CategoriesModel>	 categories=dao.fetchCategories();
+		return categories;
+
+		
+		
 	}
 
 }

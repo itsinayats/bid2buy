@@ -17,6 +17,9 @@
   		
          <!-- Mention here all the model classes along with their package name -->		
   		<mapping class="org.ringel.services.bid2buy.model.UserModel"/>		
-  		<mapping class="org.ringel.services.bid2buy.model.HelpTextModel"/>		
+  		<mapping class="org.ringel.services.bid2buy.model.HelpTextModel"/>	
+  		<mapping class="org.ringel.services.bid2buy.model.CategoriesModel"/>
+  		<mapping class="org.ringel.services.bid2buy.model.ItemModel"/>	
+  		<mapping class="org.ringel.services.bid2buy.model.BidderModel"/>	
      </session-factory>		
  </hibernate-configuration> 

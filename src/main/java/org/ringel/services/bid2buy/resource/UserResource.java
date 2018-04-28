@@ -1,7 +1,6 @@
 package org.ringel.services.bid2buy.resource;
 
-import java.text.ParseException;
-import java.util.List;
+import java.util.ArrayList;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -13,6 +12,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import org.ringel.services.bid2buy.model.CategoriesModel;
 import org.ringel.services.bid2buy.model.HelpTextModel;
 import org.ringel.services.bid2buy.model.UserModel;
 import org.ringel.services.bid2buy.service.UserService;
@@ -68,9 +68,7 @@ public class UserResource {
 		return	Response.status(Status.CREATED).entity(model).build();
 	}
 
-	
-	
-	
+
 	
 	
 	
